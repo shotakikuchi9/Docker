@@ -2,11 +2,9 @@ version: "3"
 services:
   mysql:
     image: mysql:5.7
+    env_file: 
+      - app.env
     environment:
-      MYSQL_ROOT_PASSWORD: Shota0925
-      MYSQL_DATABASE: sample
-      MYSQL_USER: ShotaKikuchi
-      MYSQL_PASSWORD: Shota0925
       TZ: 'Asia/Tokyo'
     ports:
       - "3306:3306"
